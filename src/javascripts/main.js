@@ -1,4 +1,11 @@
 import 'bootstrap';
 import '../styles/main.scss';
+import auth from './components/auth';
+import birf from './components/birfday';
 
-console.error('hi');
+const init = () => {
+  auth.authDomStringBuilder();
+  birf.birfDomStringBuilder();
+};
+
+init();
