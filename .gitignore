@@ -3,4 +3,4 @@ node_modules/
 dist/
 build/
 .vscode
-src/javascripts/helpers/apiKeys.json
+src/javascripts/helpers/data/apiKeys.json
