@@ -1,11 +1,21 @@
-import 'bootstrap';
+import firebase from 'firebase/app';
+
+import Auth from './components/auth/auth';
+import Birfday from './components/birfday/birfday';
+import MyNavbar from './components/MyNavbar/myNavbar';
+
+import authData from './helpers/data/authData';
+
+import apiKeys from './helpers/data/apiKeys.json';
+
 import '../styles/main.scss';
-import auth from './components/auth';
-import birf from './components/birfday';
 
 const init = () => {
-  auth.authDomStringBuilder();
-  birf.birfDomStringBuilder();
+  firebase.initializeApp(apiKeys.firebaseKeys);
+  MyNavbar.navbarEvents();
+  authData.checkLoginStatus();
+  Auth.authStringBuilder();
+  Birfday.birfDomStringBuilder();
 };
 
 init();
